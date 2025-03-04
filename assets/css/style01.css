@@ -296,8 +296,9 @@ header{
 
 .logo_text01{
     font-size: 18px;
-    letter-spacing: 40px;
+    letter-spacing: 30px;
     font-weight: 900;
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -308,12 +309,13 @@ header{
 }
 
 .section_title{
-    font-size: 100px;
+    width: 500px;
 }
+
 
 @media screen and (max-width: 768px) {
     .section_title{
-        font-size: 60px;
+        width: 350px;
     }
 }
 
@@ -448,7 +450,6 @@ ol, ul { list-style: none;}
 
 /* 以下、アコーディオンの設定 */
 .list {
-  margin: 0 auto;
   max-width: 500px;
   width: 100%;
   padding:0;
