@@ -450,6 +450,7 @@ ol, ul { list-style: none;}
 
 /* 以下、アコーディオンの設定 */
 .list {
+  margin: 0 auto;
   max-width: 500px;
   width: 100%;
   padding:0;
