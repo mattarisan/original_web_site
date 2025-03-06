@@ -204,7 +204,14 @@ header{
     background-position: center; /* 画像を中央に配置 */
     background-repeat: no-repeat; /* 画像を繰り返さない */  
     background-attachment: fixed;
+    right: -100%;
 
+}
+
+@media screen and (max-width: 768px) {
+    .nav{
+        right: -110%;
+    }
 }
 
 .nav__list{
@@ -217,13 +224,8 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;  
-}
-
-@media screen and (max-width: 768px) {
-    .nav__list{
-       margin: 0px 20px;
-    }
+    align-items: center; 
+    right: -100%; 
 }
 
 .nav__list_mini{
@@ -246,6 +248,12 @@ header{
 @media screen and (max-width: 768px) {
     .number{
        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .numbers{
+        display: none;
     }
 }
 
@@ -294,14 +302,10 @@ header{
     bottom: 0;
 }
 
-.nav {
-    /* 先ほどのCSSに追加 */
-    right: -100%;  /* 画面右端のさらに外へ配置 */
-}
-
 .nav.open {
    right: 0;
 }
+
 
 .header_logo {
     width: 240px;

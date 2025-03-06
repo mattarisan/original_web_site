@@ -194,6 +194,13 @@ header{
     background-position: center; /* 画像を中央に配置 */
     background-repeat: no-repeat; /* 画像を繰り返さない */  
     background-attachment: fixed;
+    right: -100%;
+}
+
+@media screen and (max-width: 768px) {
+    .nav{
+        right: -110%;
+    }
 }
 
 .nav__list{
@@ -207,12 +214,6 @@ header{
     flex-direction: row;
     justify-content: center;
     align-items: center;  
-}
-
-@media screen and (max-width: 768px) {
-    .nav__list{
-       margin: 0px 20px;
-    }
 }
 
 .nav__list_mini{
@@ -238,6 +239,11 @@ header{
     }
 }
 
+@media screen and (max-width: 768px) {
+    .numbers{
+        display: none;
+    }
+}
 .nav__item a {
     font-size: clamp(36px, 4.143vw, 48px);
     font-weight: 900;
@@ -283,11 +289,6 @@ header{
     bottom: 0;
 }
 
-.nav {
-    /* 先ほどのCSSに追加 */
-    right: -100%;  /* 画面右端のさらに外へ配置 */
-}
-
 .nav.open {
    right: 0;      /* クリックされたら、画面内にスライドイン */
 }
@@ -325,10 +326,28 @@ main{
     align-items: center;  
 }
 
+@media screen and (max-width: 768px) {
+    
+    .overview_container{
+        margin-bottom: 150px;
+    }
+    
+}
+
+
 .section01{
     display: flex;
     flex-direction: row;
 }
+
+@media screen and (max-width: 768px) {
+    .section01{
+        flex-direction: column;
+        width: 250px;
+    }
+    
+}
+
 
 .game_img01{  
     margin: 20px 0px;
@@ -339,13 +358,6 @@ main{
     margin: 20px 0px;
 }
 
-@media screen and (max-width: 768px) {
-    .game_img01{
-        flex-direction: column;
-        width: 250px;
-    }
-    
-}
 
 @media screen and (max-width: 768px) {
     .game_img02{
@@ -389,7 +401,7 @@ main{
     background-color: #72ACC2;
     border-radius: 10px;
     border: 5px solid white;
-    
+
     color: #ffffff;
     position: absolute;
     top: 0;

@@ -193,6 +193,13 @@ header{
     background-position: center; /* 画像を中央に配置 */
     background-repeat: no-repeat; /* 画像を繰り返さない */  
     background-attachment: fixed;
+    right: -100%;
+}
+
+@media screen and (max-width: 768px) {
+    .nav{
+        right: -110%;
+    }
 }
 
 .nav__list{
@@ -206,12 +213,6 @@ header{
     flex-direction: row;
     justify-content: center;
     align-items: center;  
-}
-
-@media screen and (max-width: 768px) {
-    .nav__list{
-       margin: 0px 20px;
-    }
 }
 
 .nav__list_mini{
@@ -237,6 +238,13 @@ header{
     }
 }
 
+
+@media screen and (max-width: 768px) {
+    .numbers{
+        display: none;
+    }
+}
+
 .nav__item a {
     font-size: clamp(36px, 4.143vw, 48px);
     font-weight: 900;
@@ -247,6 +255,13 @@ header{
     transition: transform 0.3s ease; 
 }
 
+@media screen and (max-width: 768px) {
+    .nav__item a{
+       font-size: 21px;
+    }
+}
+
+
 .nav__items a {
     font-size: clamp(36px, 4.143vw, 48px);
     font-weight: 900;
@@ -256,12 +271,6 @@ header{
     text-decoration: none;
     transition: transform 0.3s ease; 
     visibility: hidden;
-}
-
-@media screen and (max-width: 768px) {
-    .nav__item a{
-       font-size: 21px;
-    }
 }
 
 .nav__item a:hover {
@@ -280,11 +289,6 @@ header{
 .hamburger.open span::after {
     transform: rotate(-45deg);
     bottom: 0;
-}
-
-.nav {
-    /* 先ほどのCSSに追加 */
-    right: -100%;  /* 画面右端のさらに外へ配置 */
 }
 
 .nav.open {
@@ -324,9 +328,26 @@ main{
     align-items: center;  
 }
 
+@media screen and (max-width: 768px) {
+    
+    .activity_container{
+        margin-bottom: 150px;
+    }
+    
+}
+
+
 .section01{
     display: flex;
     flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+    .section01{
+        flex-direction: column;
+        width: 250px;
+    }
+    
 }
 
 .game_img01{
@@ -344,13 +365,6 @@ main{
     margin: 20px 0px;
 }
 
-@media screen and (max-width: 768px) {
-    .game_img01{
-        flex-direction: column;
-        width: 250px;
-    }
-    
-}
 
 @media screen and (max-width: 768px) {
     .game_img02{
