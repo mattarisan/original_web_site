@@ -226,6 +226,13 @@ header{
     color: #fff;
 }
 
+.numbers{
+    font-size: 10px;
+    margin-right: 170px;
+    color: #fff;
+    visibility: hidden;
+}
+
 @media screen and (max-width: 768px) {
     .number{
        margin: 0px;
@@ -240,6 +247,17 @@ header{
     color: #ECCA66;
     text-decoration: none;
     transition: transform 0.3s ease; 
+}
+
+.nav__items a {
+    font-size: clamp(36px, 4.143vw, 48px);
+    font-weight: 900;
+
+    display: inline-block;
+    color: #ECCA66;
+    text-decoration: none;
+    transition: transform 0.3s ease; 
+    visibility: hidden;
 }
 
 @media screen and (max-width: 768px) {

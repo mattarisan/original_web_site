@@ -1,9 +1,9 @@
-const hamburger = document.querySelector('.hamburger'); // ハンバーガーメニューの要素を取得
-const nav = document.querySelector('.nav'); // ナビゲーションメニューの要素を取得
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.nav');
 
 hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open'); // ハンバーガーメニューの開閉状態を切り替え
-    nav.classList.toggle('open'); // ナビゲーションメニューの表示/非表示を切り替え
+    hamburger.classList.toggle('open');
+    nav.classList.toggle('open'); 
 });
 
 const accordions = document.querySelectorAll('.list-item');
@@ -49,7 +49,7 @@ const returnTop = document.querySelector('.header_logo');
 	
    window.addEventListener('scroll', () => {
 	let scrollY = window.scrollY;
-	if(scrollY >= 900) {
+	if(scrollY >= 945) {
 		//classにactive付与
 		returnTop.classList.add('active');
 	}

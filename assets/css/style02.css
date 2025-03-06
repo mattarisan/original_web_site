@@ -225,6 +225,13 @@ header{
     color: #fff;
 }
 
+.numbers{
+    font-size: 10px;
+    margin-right: 170px;
+    color: #fff;
+    visibility: hidden;
+}
+
 @media screen and (max-width: 768px) {
     .number{
        margin: 0px;
@@ -239,6 +246,17 @@ header{
     color: #ECCA66;
     text-decoration: none;
     transition: transform 0.3s ease; 
+}
+
+.nav__items a {
+    font-size: clamp(36px, 4.143vw, 48px);
+    font-weight: 900;
+
+    display: inline-block;
+    color: #ECCA66;
+    text-decoration: none;
+    transition: transform 0.3s ease; 
+    visibility: hidden;
 }
 
 @media screen and (max-width: 768px) {
@@ -303,10 +321,64 @@ main{
     background-color: #72ACC2;
 
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;  
 }
+
+.game_img01{
+    display: flex;
+    flex-direction: row;
+  
+    margin: 20px 0px;
+}
+
+
+.game_img02{
+    display: flex;
+    flex-direction: row;
+  
+    margin: 20px 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .game_img01{
+        flex-direction: column;
+        width: 250px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .game_img02{
+        display: none;
+    }
+    
+}
+
+.game_img01 img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 追加: トランジション */
+    margin:5px;
+    border: 5px solid white;
+    border-radius: 10px;
+}
+
+.game_img02 img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 追加: トランジション */
+    margin:5px;
+    border: 5px solid white;
+    border-radius: 10px;
+}
+
+.game_img01 img:hover {
+    transform: scale(1.05); /* 追加: ホバー時に拡大 */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0)
+}
+
+.game_img02 img:hover {
+    transform: scale(1.05); /* 追加: ホバー時に拡大 */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0)
+}
+
 
 .overview_data_text{
     color: white;
@@ -320,7 +392,7 @@ main{
 
 @media screen and (max-width: 768px) {
     .overview_data_text{
-        padding: 66px;
+        padding: 16px 26px;
     }
 }
 
