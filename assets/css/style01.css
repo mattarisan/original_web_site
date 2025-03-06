@@ -14,14 +14,23 @@ body {
 }
 
 a{
-    padding: 8px 20px;
+    padding: 8px 15px;
     /* こだわりポイント */
 }
 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 768px) {
     a{
-        padding: 4px 10px;
+        padding: 4px 8px;
     }
+}
+
+.fade {
+	opacity: 0;
+	transform: translateY(100px);
+	transition: opacity 1.5s, transform 1s;
+}.fade.active {
+	opacity: 1;
+	transform: translateY(0px);
 }
 
 header{
@@ -41,7 +50,7 @@ header{
     flex-direction: row;
     justify-content:right;
     align-items: center;
-    z-index: 1000;
+    z-index: 100;
 }
 
 @media screen and (max-width: 768px) {
@@ -272,9 +281,35 @@ header{
 }
 
 .nav.open {
-   right: 0;      /* クリックされたら、画面内にスライドイン */
+   right: 0;
 }
 
+.header_logo {
+    width: 240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed; 
+    top: 10px; 
+    left: 10px;
+    z-index: 101;
+    opacity: 0;
+	visibility: hidden;
+    margin: 30px 0px;
+}
+
+.header_logo.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media screen and (max-width: 768px) {
+    .header_logo {
+        top: 5px; /* 調整可能: 上からの距離 */
+        left: 5px; /* 調整可能: 左からの距離 */
+    }
+}
   
 .logo_box{
 
@@ -647,3 +682,8 @@ ol, ul { list-style: none;}
     font-size: 15px;
     color: white;
 }
+
+
+
+
+

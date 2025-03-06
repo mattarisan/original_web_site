@@ -27,5 +27,34 @@ const circleButton = document.getElementById('circle_btn');
 
   circleButton.addEventListener('click', function() {
     // 移動先のHTMLファイルのパスを指定します
-    window.location.href = 'index04.html'; // 例：'contact.html'
+    window.location.href = 'index04.html';
 });
+
+const targets = document.getElementsByClassName('fade');
+for(let i = targets.length; i--;){
+  let observer = new IntersectionObserver((entries, observer) => {
+    for(let j = entries.length; j--;){
+      if (entries[j].isIntersecting) {
+        entries[j].target.classList.add('active');
+        observer.unobserve(entries[j].target);
+      }
+    }
+  }, {
+    rootMargin: '0px 0px -100px 0px' // 要素がビューポートの100px手前で表示されるように調整
+  });
+  observer.observe(targets[i]);
+}
+
+const returnTop = document.querySelector('.header_logo');  
+	
+   window.addEventListener('scroll', () => {
+	let scrollY = window.scrollY;
+	if(scrollY >= 900) {
+		//classにactive付与
+		returnTop.classList.add('active');
+	}
+	else {
+		//classからactive削除
+		returnTop.classList.remove('active');
+	}
+   });

@@ -9,13 +9,13 @@ body {
 }
 
 a{
-    padding: 8px 20px;
+    padding: 8px 15px;
     /* こだわりポイント */
 }
 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 768px) {
     a{
-        padding: 4px 10px;
+        padding: 4px 8px;
     }
 }
 

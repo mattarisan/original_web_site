@@ -14,37 +14,21 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&family=M+PLUS+1p&family=Poppins:wght@400;900&display=swap" rel="stylesheet">
 </head>
 
-<script src="./assets/JS/loading.js"></script>
-<div id="loading_container">
-    <div class="L">
-      <p>L</p>
-    </div>
-    <div class="O">
-      <p>O</p>
-    </div>
-    <div class="A">
-      <p>A</p>
-    </div>
-    <div class="D">
-      <p>D</p>
-    </div>
-    <div class="I">
-      <p>I</p>
-    </div>
-    <div class="N">
-      <p>N</p>
-    </div>
-    <div class="G">
-      <p>G</p>
-    </div>
-</div>
+
   
 <body>
-   <header> 
+<script src="./assets/JS/loading.js"></script>
+
+<div id="loading_container">
+  <h1>loading...</h1>
+  <div class="loader"></div>
+</div>
+   <header>
+        
         <div class="header_container"> <!-- 一番上の帯 -->
             <div class="sns_tag"> <!-- アイコンのタグ -->
                 <ul class="sns_list_header">
-                    <li><a href="#" class="sns_icon_header"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="https://twitter.com/@Nashidai_Touhou" class="sns_icon_header"><i class="fa-brands fa-x-twitter"></i></a></li>
                     <li><a href="#" class="sns_icon_header"><i class="fa-brands fa-discord"></i></a></li>
                 </ul>
             </div>
@@ -53,6 +37,7 @@
                 <span></span>
             </button>
         </div>
+
         <nav class="nav">
           <ul class="nav__list">
             <ul class="nav__list_mini ">
@@ -60,8 +45,8 @@
                 <li class="nav__item"><a href="./index.html">Top</a></li>
                 <span class="number">04</span>
                 <li class="nav__item"><a href="./index04.html">Contact</a></li>
-                <span class="number">07</span>
-                <li class="nav__item"><a href="#">Activity</a></li>
+                <!-- <span class="number">07</span>
+                <li class="nav__item"><a href="#">Activity</a></li> -->
             </ul>
             
             <ul class="nav__list_mini">
@@ -69,8 +54,8 @@
                 <li class="nav__item"><a href="./index02.html">Overview</a></li>
                 <span class="number">05</span>
                 <li class="nav__item"><a href="./index05.html">Members</a></li>
-                <span class="number">08</span>
-                <li class="nav__item"><a href="#">Activity</a></li>
+                <!-- <span class="number">08</span>
+                <li class="nav__item"><a href="#">Activity</a></li> -->
             </ul>
 
             <ul class="nav__list_mini">
@@ -78,12 +63,14 @@
                 <li class="nav__item"><a href="./index03.html">Activity</a></li>
                 <span class="number">06</span>
                 <li class="nav__item"><a href="#">About</a></li>
-                <span class="number">09</span>
-                <li class="nav__item"><a href="#">Activity</a></li>
+                <!-- <span class="number">09</span>
+                <li class="nav__item"><a href="#">Activity</a></li> -->
             </ul>
         </ul>
         </nav>
-
+        
+        <div class="header_logo"><img src="./assets/img/title_img/title.png" alt=""></div>
+        
         <div class="logo_box"> <!-- タイトル -->
             <div class="logo_text01">こちりんかざん</div>
             <h1 class="section_title"><img src="./assets/img/title_img/title.png" width="500px"  alt=""></h1>
@@ -94,6 +81,7 @@
    </header>
 
    <main class="main">
+
         <div class="selection_container"> <!-- メイン内のSNSタグ-->
             <h3 class="selection_title_sns"><b>Official SNS</b></h3>
             <ul class="sns_list_main">
@@ -103,7 +91,7 @@
             </ul>
         </div>
 
-        <section> <!-- 概要 （写真は随時追加予定）-->
+        <section class="fade"> <!-- 概要 （写真は随時追加予定）-->
             <h2 class="headline_main">News</h2>
             <p class="news_content">
                 2025/03/dd：東風林火山公式Webサイトを作成しました<br>
@@ -121,7 +109,7 @@
                 </li>
         </section>
         
-        <section> <!-- 活動内容（写真は随時追加予定）-->
+        <section class="fade"> <!-- 活動内容（写真は随時追加予定）-->
             <h2 class="headline_main">History</h2>
             <p class="history_content">
                 2025/01/30：3人目の入部祝い＆例会<br>

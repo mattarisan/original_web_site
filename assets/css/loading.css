@@ -1,196 +1,50 @@
-body {
-   
-    font-family: "Helvetica", "Arial", sans-serif;
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 100;
-    font-family: "Poppins", "M PLUS 1p", sans-serif;
-    font-size: 15px;
-    
-}
-
-.loaded {
-    opacity: 0;
-    visibility: hidden;
-}
-  
-
 #loading_container {
-    width: 100px;
-    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5C95B0;
+    display: flex;
+    font-family: "Poppins", "M PLUS 1p", sans-serif;
+    font-weight: 900;
+    color: #ECCA66;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* 最前面に表示 */
+}
+
+.loader {
+    --loader-color: #0071e2; /* ローディングバーの色 */
+    width: 230px;
+    height: 4px;
+    border-radius: 30px;
+    background-color: transparent; /* 背景を透明にする */
+    position: relative;
+    overflow: hidden; /* アニメーションがはみ出さないように */
+}
+
+.loader::before {
+    content: "";
     position: absolute;
-    margin: auto;
-    display: block;
-    top: 50%;
-    left: 50%;
-    transition: opacity 0.5s ease;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--loader-color);
+    transform-origin: left; /* アニメーションの起点を左端に */
+    animation: moving 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite; /* アニメーションを調整 */
 }
 
-.L, .O, .A, .D, .I, .N, .G {
-    position: absolute;
-    top: 50%;
-}
-
-/* pタグにletter-spacingを適用 */
-.L p, .O p, .A p, .D p, .I p, .N p, .G p {
-    letter-spacing: 10px; /* ここで文字間隔を調整します。値を変更してください。 */
-}
-
-.L {
-    left: 5%;
-    -webkit-animation: L 2s infinite;
-}
-
-.O {
-    left: 18%;
-    -webkit-animation: O 2s infinite;
-    -webkit-animation-delay: 100ms;
-}
-
-.A {
-    left: 35%;
-    -webkit-animation: A 2s infinite;
-    -webkit-animation-delay: 200ms;
-}
-
-.D {
-    left: 50%;
-    -webkit-animation: D 2s infinite;
-    -webkit-animation-delay: 300ms;
-}
-
-.I {
-    left: 65%;
-    -webkit-animation: I 2s infinite;
-    -webkit-animation-delay: 400ms;
-}
-
-.N {
-    left: 75%;
-    -webkit-animation: N 2s infinite;
-    -webkit-animation-delay: 500ms;
-}
-
-.G {
-    left: 90%;
-    -webkit-animation: G 2s infinite;
-    -webkit-animation-delay: 600ms;
-}
-
-@-webkit-keyframes L {
+@keyframes moving {
     0% {
-        top: 0px;
-        opacity: 0;
+        transform: scaleX(0); /* 初期状態は非表示 */
     }
-
     50% {
-        top: 50px;
-        opacity: 1;
+        transform: scaleX(1); /* 中間で完全に表示 */
     }
-
     100% {
-        top: 0px;
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes O {
-    0% {
-        top: 0px;
-        opacity: 0;
-    }
-
-    50% {
-        top: 50px;
-        opacity: 1;
-    }
-
-    100% {
-        top: 0px;
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes A {
-    0% {
-        top: 0px;
-        opacity: 0;
-    }
-
-    50% {
-        top: 50px;
-        opacity: 1;
-    }
-
-    100% {
-        top: 0px;
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes D {
-    0% {
-        top: 0px;
-        opacity: 0;
-    }
-
-    50% {
-        top: 50px;
-        opacity: 1;
-    }
-
-    100% {
-        top: 0px;
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes I {
-    0% {
-        top: 0px;
-        opacity: 0;
-    }
-
-    50% {
-        top: 50px;
-        opacity: 1;
-    }
-
-    100% {
-        top: 0px;
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes N {
-    0% {
-        top: 0px;
-        opacity: 0;
-    }
-
-    50% {
-        top: 50px;
-        opacity: 1;
-    }
-
-    100% {
-        top: 0px;
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes G {
-    0% {
-        top: 0px;
-        opacity: 0;
-    }
-
-    50% {
-        top: 50px;
-        opacity: 1;
-    }
-
-    100% {
-        top: 0px;
-        opacity: 0;
+        transform: scaleX(0); /* 最後は非表示に戻る */
     }
 }

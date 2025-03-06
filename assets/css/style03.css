@@ -10,13 +10,13 @@ body {
 }
 
 a{
-    padding: 8px 20px;
+    padding: 8px 15px;
     /* こだわりポイント */
 }
 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 768px) {
     a{
-        padding: 4px 10px;
+        padding: 4px 8px;
     }
 }
 
@@ -302,11 +302,28 @@ main{
     background-color: #72ACC2;
 
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;   
     align-items: center;  
 }
 
+.game_img{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    margin: 50px 0px;
+}
+
+.game_img img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 追加: トランジション */
+    margin:5px;
+    border: 5px solid white;
+    border-radius: 10px;
+}
+
+.game_img img:hover {
+    transform: scale(1.05); /* 追加: ホバー時に拡大 */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0)
+}
 .activity_data_text{
     color: white;
     font-size: 15px;
