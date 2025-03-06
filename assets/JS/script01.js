@@ -49,7 +49,7 @@ const returnTop = document.querySelector('.header_logo');
 	
    window.addEventListener('scroll', () => {
 	let scrollY = window.scrollY;
-	if(scrollY >= 945) {
+	if(scrollY >= 500 ) {
 		//classにactive付与
 		returnTop.classList.add('active');
 	}

@@ -317,11 +317,16 @@ main{
 .activity_container{
     width: 100%;
     height: 100vh;
-    background-color: #72ACC2;
+    margin-bottom: 400px;
 
     display: flex;
     flex-direction: column;   
     align-items: center;  
+}
+
+.section01{
+    display: flex;
+    flex-direction: row;
 }
 
 .game_img01{
@@ -378,9 +383,77 @@ main{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0)
 }
 
+.img-flip figure {
+    position: relative;
+    display: inline-block; /* 横並びにする */
+    margin: 0; /* デフォルトのマージンをリセット */
+}
+
+.img-flip figcaption {
+    background-color: #72ACC2;
+    border-radius: 10px;
+    border: 5px solid white;
+    
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    display: flex; /* 説明文を中央に配置 */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.img-flip a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.img-flip *,
+.img-flip figure {
+    transition: all 0.35s ease;
+}
+
+.img-flip {
+    perspective: 50em;
+}
+
+.img-flip:hover figcaption {
+    opacity: 1;
+    transition-delay: 0.14s;
+}
+
+.img-flip:hover img {
+    transform: rotateX(-180deg);
+}
+
+.img-flip figcaption {
+    transform: rotateX(90deg);
+    transform-origin: 0% 50%;
+}
+
+.img-flip:hover figcaption {
+    transform: rotateX(0deg);
+}
+
+/* 既存のスタイルを維持するための追加 */
+.game_img01 li,
+.game_img02 li {
+    display: inline-block; /* 既存の横並びを維持 */
+}
+
+
 .activity_data_text{
     color: white;
     font-size: 15px;
+    padding-top: 100px;
 
     display: flex;
     justify-content: center;
